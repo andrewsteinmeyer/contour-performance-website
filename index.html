@@ -1,738 +1,673 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contour Performance | Concierge Medicine — Charleston, SC</title>
-    <meta name="description" content="Concierge medical practice in Charleston, SC. Performance medicine, ADHD optimization, VIP care. Limited to ~150 patients. Dr. Ed O'Bryan, MD.">
-    <meta property="og:title" content="Contour Performance — Medicine Designed Around You">
-    <meta property="og:description" content="Concierge medical care for high performers. ADHD optimization, functional medicine, and VIP access — from a physician who actually knows you.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://contour-performance.com">
-    <link rel="canonical" href="https://contour-performance.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Serif+Display&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #1a1a2e;
-            --primary-light: #2d2d44;
-            --accent: #c9a55a;
-            --accent-light: #f0e6cc;
-            --warm: #c9a55a;
-            --bg: #fafaf8;
-            --bg-alt: #f3f2ee;
-            --text: #1a1a2e;
-            --text-light: #5a5a6e;
-            --white: #ffffff;
-            --radius: 12px;
-            --shadow: 0 4px 24px rgba(26,26,46,0.06);
-            --shadow-lg: 0 12px 48px rgba(26,26,46,0.10);
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body {
-            font-family: 'Inter', -apple-system, sans-serif;
-            color: var(--text); background: var(--bg);
-            line-height: 1.6; -webkit-font-smoothing: antialiased;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contour Performance Health — Performance Medicine by Invitation Only</title>
+<meta name="description" content="An ultra-private physician-led practice limited to fewer than 70 patients. Functional, traditional, and longevity medicine — personalized for peak performance.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-        /* NAV */
-        nav {
-            position: fixed; top: 0; width: 100%; z-index: 100;
-            background: rgba(255,255,255,0.95); backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(26,26,46,0.06); padding: 0 2rem;
-        }
-        .nav-inner {
-            max-width: 1200px; margin: 0 auto;
-            display: flex; align-items: center; justify-content: space-between; height: 72px;
-        }
-        .nav-logo {
-            font-family: 'DM Serif Display', serif;
-            font-size: 1.4rem; font-weight: 400; color: var(--primary); text-decoration: none;
-            letter-spacing: -0.01em;
-        }
-        .nav-logo span { color: var(--accent); }
-        .nav-links { display: flex; gap: 2rem; align-items: center; }
-        .nav-links a {
-            text-decoration: none; color: var(--text-light);
-            font-size: 0.9rem; font-weight: 500; transition: color 0.2s;
-        }
-        .nav-links a:hover { color: var(--primary); }
-        .nav-cta {
-            background: var(--primary) !important; color: var(--white) !important;
-            padding: 0.6rem 1.4rem !important; border-radius: 8px;
-            font-weight: 600 !important; transition: all 0.2s !important;
-        }
-        .nav-cta:hover { background: var(--primary-light) !important; }
-        .mobile-toggle { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
-        .mobile-toggle span { display: block; width: 24px; height: 2px; background: var(--text); margin: 5px 0; transition: 0.3s; }
+:root {
+  --bg-primary: #0a0a0c;
+  --bg-secondary: #111114;
+  --bg-card: #16161a;
+  --bg-card-hover: #1c1c21;
+  --border: #2a2a30;
+  --border-light: #3a3a42;
+  --gold: #c9a96e;
+  --gold-light: #dfc393;
+  --gold-dim: #8a7045;
+  --text-primary: #eae8e4;
+  --text-secondary: #9a9898;
+  --text-muted: #6a6868;
+  --white: #f5f3f0;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'Inter', -apple-system, sans-serif;
+}
 
-        /* HERO */
-        .hero {
-            padding: 10rem 2rem 6rem;
-            background: linear-gradient(160deg, var(--bg) 0%, var(--bg-alt) 40%, #e8e4da 100%);
-            position: relative; overflow: hidden;
-        }
-        .hero::after {
-            content: ''; position: absolute; top: -40%; right: -15%;
-            width: 600px; height: 600px;
-            background: radial-gradient(circle, rgba(201,165,90,0.1) 0%, transparent 70%);
-            border-radius: 50%;
-        }
-        .hero-inner {
-            max-width: 1200px; margin: 0 auto;
-            display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem;
-            align-items: center; position: relative; z-index: 1;
-        }
-        .hero h1 {
-            font-family: 'DM Serif Display', serif;
-            font-size: 3.2rem; line-height: 1.12; font-weight: 400;
-            color: var(--primary); margin-bottom: 1.5rem;
-        }
-        .hero-sub {
-            font-size: 1.1rem; color: var(--text-light);
-            margin-bottom: 2rem; max-width: 520px; line-height: 1.7;
-        }
-        .hero-support {
-            font-size: 0.95rem; color: var(--text-light);
-            margin-bottom: 2rem; padding: 1rem 1.25rem;
-            background: var(--white); border-radius: 10px;
-            border-left: 3px solid var(--accent); max-width: 520px;
-        }
-        .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
-        .btn-primary {
-            display: inline-flex; align-items: center; gap: 0.5rem;
-            background: var(--primary); color: var(--white);
-            padding: 1rem 2rem; border-radius: 10px;
-            font-size: 1rem; font-weight: 600; text-decoration: none;
-            transition: all 0.2s; border: none; cursor: pointer;
-        }
-        .btn-primary:hover { background: var(--primary-light); transform: translateY(-1px); box-shadow: var(--shadow); }
-        .btn-secondary {
-            display: inline-flex; align-items: center; gap: 0.5rem;
-            background: var(--white); color: var(--primary);
-            padding: 1rem 2rem; border-radius: 10px;
-            font-size: 1rem; font-weight: 600; text-decoration: none;
-            border: 2px solid var(--primary); transition: all 0.2s;
-        }
-        .btn-secondary:hover { background: var(--bg-alt); }
-        .hero-visual { display: flex; justify-content: center; align-items: center; }
-        .hero-card {
-            background: var(--white); border-radius: 20px;
-            padding: 2.5rem; box-shadow: var(--shadow-lg); max-width: 380px; width: 100%;
-        }
-        .hero-card .doctor-icon {
-            width: 80px; height: 80px; border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary), #3d3d5c);
-            display: flex; align-items: center; justify-content: center;
-            font-size: 2rem; margin-bottom: 1.5rem; color: white;
-        }
-        .hero-card h3 { font-size: 1.1rem; margin-bottom: 0.25rem; color: var(--primary); }
-        .hero-card .subtitle { font-size: 0.85rem; color: var(--text-light); margin-bottom: 1.5rem; }
-        .hero-card .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-        .stat { text-align: center; padding: 0.75rem; background: var(--bg-alt); border-radius: 10px; }
-        .stat .num { font-size: 1.4rem; font-weight: 800; color: var(--primary); }
-        .stat .label { font-size: 0.7rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.5px; }
+html { scroll-behavior: smooth; }
 
-        /* SECTIONS */
-        section { padding: 5rem 2rem; }
-        .section-inner { max-width: 1100px; margin: 0 auto; }
-        .section-header { text-align: center; margin-bottom: 3.5rem; }
-        .section-header h2 {
-            font-family: 'DM Serif Display', serif;
-            font-size: 2.2rem; color: var(--primary); margin-bottom: 0.75rem;
-        }
-        .section-header p { color: var(--text-light); font-size: 1.05rem; max-width: 600px; margin: 0 auto; }
+body {
+  font-family: var(--sans);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
 
-        /* PROBLEM */
-        .problem { background: var(--bg-alt); }
-        .problem-list { max-width: 700px; margin: 0 auto 2rem; }
-        .problem-item {
-            display: flex; gap: 1rem; align-items: flex-start;
-            padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
-            background: var(--white); border-radius: var(--radius);
-            box-shadow: var(--shadow); border-left: 3px solid var(--warm);
-        }
-        .problem-item .icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 0.15rem; }
-        .problem-item p { font-size: 0.95rem; color: var(--text); line-height: 1.5; }
-        .problem-closing {
-            text-align: center; font-size: 1.1rem; font-weight: 600;
-            color: var(--primary); margin-top: 2.5rem;
-            font-family: 'DM Serif Display', serif;
-        }
+/* ─── NAV ─── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 1.5rem 3rem;
+  display: flex; justify-content: space-between; align-items: center;
+  background: rgba(10,10,12,0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.4s, padding 0.4s;
+}
+nav.scrolled { border-color: var(--border); padding: 1rem 3rem; }
+.nav-logo {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+.nav-links { display: flex; gap: 2.5rem; list-style: none; }
+.nav-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav-links a:hover { color: var(--gold); }
+.nav-cta {
+  padding: 0.6rem 1.8rem;
+  border: 1px solid var(--gold-dim);
+  color: var(--gold) !important;
+  font-size: 0.7rem !important;
+  letter-spacing: 0.15em !important;
+  transition: all 0.3s !important;
+}
+.nav-cta:hover { background: var(--gold); color: var(--bg-primary) !important; }
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
+.nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--text-secondary); margin: 5px 0; transition: all 0.3s; }
 
-        /* DIFFERENTIATORS */
-        .diff-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-        .diff-card {
-            background: var(--white); border-radius: var(--radius); padding: 2rem;
-            box-shadow: var(--shadow); transition: transform 0.2s;
-        }
-        .diff-card:hover { transform: translateY(-2px); }
-        .diff-card .icon { font-size: 1.8rem; margin-bottom: 1rem; }
-        .diff-card h3 { font-size: 1rem; margin-bottom: 0.75rem; color: var(--primary); }
-        .diff-card p { font-size: 0.88rem; color: var(--text-light); line-height: 1.6; }
+/* ─── HERO ─── */
+.hero {
+  min-height: 100vh;
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+  text-align: center;
+  padding: 8rem 2rem 6rem;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 50% 30%, rgba(201,169,110,0.06) 0%, transparent 60%);
+}
+.hero-eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 2.5rem;
+  font-weight: 500;
+  opacity: 0; animation: fadeUp 1s 0.3s forwards;
+}
+.hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--white);
+  max-width: 800px;
+  margin-bottom: 2rem;
+  opacity: 0; animation: fadeUp 1s 0.5s forwards;
+}
+.hero-sub {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  max-width: 520px;
+  line-height: 1.7;
+  font-weight: 300;
+  margin-bottom: 3rem;
+  opacity: 0; animation: fadeUp 1s 0.7s forwards;
+}
+.hero-cta {
+  display: inline-block;
+  padding: 1rem 3rem;
+  background: var(--gold);
+  color: var(--bg-primary);
+  text-decoration: none;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 0.4s;
+  opacity: 0; animation: fadeUp 1s 0.9s forwards;
+}
+.hero-cta:hover { background: var(--gold-light); transform: translateY(-2px); }
+.hero-scroll {
+  position: absolute; bottom: 3rem;
+  width: 1px; height: 60px;
+  background: linear-gradient(to bottom, var(--gold-dim), transparent);
+  opacity: 0; animation: fadeIn 1s 1.5s forwards;
+}
 
-        /* HOW IT WORKS */
-        .steps { background: var(--bg-alt); }
-        .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-        .step {
-            text-align: center; padding: 2.5rem 1.5rem;
-            background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow);
-        }
-        .step-num {
-            width: 52px; height: 52px; border-radius: 50%;
-            background: var(--primary); color: var(--white);
-            display: inline-flex; align-items: center; justify-content: center;
-            font-size: 1.3rem; font-weight: 700; margin-bottom: 1.25rem;
-        }
-        .step h3 { font-size: 1.05rem; margin-bottom: 0.75rem; color: var(--primary); }
-        .step p { font-size: 0.88rem; color: var(--text-light); line-height: 1.6; }
+/* ─── SECTIONS ─── */
+section { padding: 7rem 2rem; }
+.container { max-width: 1100px; margin: 0 auto; }
 
-        /* SERVICES */
-        .services-content {
-            display: grid; grid-template-columns: 1.3fr 1fr; gap: 3rem; align-items: start;
-        }
-        .services-list { list-style: none; }
-        .services-list li {
-            display: flex; gap: 1rem; align-items: flex-start;
-            padding: 1rem 0; border-bottom: 1px solid var(--bg-alt);
-        }
-        .services-list li:last-child { border-bottom: none; }
-        .services-list .check {
-            flex-shrink: 0; width: 28px; height: 28px; border-radius: 8px;
-            background: var(--accent-light); color: var(--primary);
-            display: flex; align-items: center; justify-content: center;
-            font-weight: 700; font-size: 0.9rem; margin-top: 0.1rem;
-        }
-        .services-list h4 { font-size: 0.95rem; color: var(--primary); margin-bottom: 0.2rem; }
-        .services-list p { font-size: 0.85rem; color: var(--text-light); }
-        .services-sidebar {
-            background: var(--bg-alt); border-radius: var(--radius); padding: 2rem;
-        }
-        .services-sidebar h3 { font-size: 1rem; color: var(--primary); margin-bottom: 1rem; font-weight: 700; }
-        .services-sidebar li {
-            list-style: none; padding: 0.5rem 0;
-            font-size: 0.88rem; color: var(--text-light);
-            display: flex; gap: 0.5rem; align-items: flex-start;
-        }
-        .services-sidebar li::before { content: '—'; color: var(--warm); font-weight: 700; }
+.section-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+.section-title {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 300;
+  color: var(--white);
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
 
-        /* DOCTOR */
-        .doctor { background: var(--bg-alt); }
-        .doctor-content {
-            display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; align-items: center;
-        }
-        .doctor-photo {
-            background: linear-gradient(135deg, var(--primary), #3d3d5c);
-            border-radius: 20px; aspect-ratio: 3/4;
-            display: flex; align-items: center; justify-content: center;
-            color: white; font-size: 4rem;
-        }
-        .doctor-bio h2 {
-            font-family: 'DM Serif Display', serif;
-            font-size: 2rem; color: var(--primary); margin-bottom: 0.5rem;
-        }
-        .doctor-bio .title { color: var(--accent); font-weight: 600; margin-bottom: 1.5rem; font-size: 1.05rem; }
-        .doctor-bio p { color: var(--text-light); margin-bottom: 1rem; font-size: 0.95rem; line-height: 1.7; }
-        .doctor-quote {
-            font-style: italic; padding: 1.25rem 1.5rem; margin-top: 1rem;
-            background: var(--white); border-radius: 10px;
-            border-left: 3px solid var(--accent); font-size: 0.92rem; color: var(--primary);
-        }
+/* ─── ABOUT / PHILOSOPHY ─── */
+.about { border-top: 1px solid var(--border); }
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+.about-text p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+}
+.about-pillars { padding-top: 1rem; }
+.pillar {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.pillar:first-child { border-top: 1px solid var(--border); }
+.pillar h4 {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--white);
+  margin-bottom: 0.4rem;
+}
+.pillar p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 300;
+}
 
-        /* PRICING */
-        .pricing-card {
-            max-width: 560px; margin: 0 auto;
-            background: var(--white); border-radius: 20px;
-            padding: 3rem; box-shadow: var(--shadow-lg);
-            text-align: center; position: relative; overflow: hidden;
-        }
-        .pricing-card::before {
-            content: ''; position: absolute; top: 0; left: 0; right: 0;
-            height: 4px; background: linear-gradient(90deg, var(--primary), var(--accent));
-        }
-        .pricing-label {
-            font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;
-            color: var(--accent); font-weight: 700; margin-bottom: 0.5rem;
-        }
-        .pricing-amount { margin-bottom: 0.5rem; }
-        .pricing-amount .dollar { font-size: 2rem; font-weight: 700; color: var(--primary); vertical-align: top; }
-        .pricing-amount .price { font-size: 4rem; font-weight: 800; color: var(--primary); line-height: 1; }
-        .pricing-amount .period { font-size: 1.1rem; color: var(--text-light); }
-        .pricing-note { font-size: 0.9rem; color: var(--text-light); margin-bottom: 2rem; }
-        .pricing-features { text-align: left; margin-bottom: 2rem; }
-        .pricing-features li {
-            list-style: none; padding: 0.6rem 0;
-            border-bottom: 1px solid var(--bg-alt);
-            font-size: 0.9rem; color: var(--text);
-            display: flex; align-items: flex-start; gap: 0.75rem;
-        }
-        .pricing-features li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+/* ─── DIVIDER ─── */
+.divider {
+  padding: 5rem 2rem;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-secondary);
+}
+.divider-text {
+  font-family: var(--serif);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 300;
+  color: var(--text-secondary);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-style: italic;
+}
 
-        /* FAQ */
-        .faq { background: var(--bg-alt); }
-        .faq-list { max-width: 740px; margin: 0 auto; }
-        .faq-item {
-            background: var(--white); border-radius: var(--radius);
-            margin-bottom: 0.75rem; box-shadow: var(--shadow); overflow: hidden;
-        }
-        .faq-q {
-            padding: 1.25rem 1.5rem; cursor: pointer;
-            display: flex; justify-content: space-between; align-items: center;
-            font-weight: 600; font-size: 0.95rem; color: var(--primary);
-            border: none; background: none; width: 100%; text-align: left;
-            font-family: inherit; gap: 1rem;
-        }
-        .faq-q::after { content: '+'; font-size: 1.3rem; color: var(--accent); transition: transform 0.2s; flex-shrink: 0; }
-        .faq-q.active::after { content: '−'; }
-        .faq-a {
-            max-height: 0; overflow: hidden; transition: max-height 0.3s ease;
-            padding: 0 1.5rem; color: var(--text-light); font-size: 0.9rem; line-height: 1.7;
-        }
-        .faq-a.active { max-height: 400px; padding-bottom: 1.25rem; }
+/* ─── MEMBERSHIP ─── */
+.membership { background: var(--bg-primary); }
+.membership-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.membership-header p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  max-width: 550px;
+  margin: 0 auto;
+  font-weight: 300;
+  line-height: 1.7;
+}
+.pricing-badge {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.6rem 2rem;
+  border: 1px solid var(--border);
+  font-size: 0.8rem;
+  color: var(--gold);
+  letter-spacing: 0.1em;
+}
+.pricing-badge span { color: var(--text-muted); font-size: 0.75rem; margin-left: 0.5rem; }
 
-        /* FINAL CTA */
-        .final-cta {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-            padding: 5rem 2rem; text-align: center; color: var(--white);
-        }
-        .final-cta h2 {
-            font-family: 'DM Serif Display', serif; font-size: 2.4rem; margin-bottom: 1.5rem;
-        }
-        .final-cta p { font-size: 1.05rem; opacity: 0.9; max-width: 600px; margin: 0 auto 1rem; line-height: 1.7; }
-        .final-cta .price-line { font-size: 1.2rem; font-weight: 700; margin: 1.5rem 0 2rem; opacity: 1; }
-        .btn-white {
-            display: inline-flex; align-items: center; gap: 0.5rem;
-            background: var(--white); color: var(--primary);
-            padding: 1rem 2.5rem; border-radius: 10px;
-            font-size: 1.05rem; font-weight: 700; text-decoration: none;
-            transition: all 0.2s; margin-bottom: 1rem;
-        }
-        .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,0,0,0.2); }
-        .sub-cta { font-size: 0.9rem; opacity: 0.8; margin-top: 0.5rem; }
-        .sub-cta a { color: var(--accent-light); text-decoration: underline; }
+.tiers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.tier {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 2.5rem 2rem;
+  transition: all 0.4s;
+  position: relative;
+}
+.tier:hover { border-color: var(--border-light); background: var(--bg-card-hover); }
+.tier.featured { border-color: var(--gold-dim); }
+.tier.featured::before {
+  content: 'MOST POPULAR';
+  position: absolute; top: -0.6rem; left: 2rem;
+  background: var(--gold);
+  color: var(--bg-primary);
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  padding: 0.2rem 0.8rem;
+  font-weight: 600;
+}
+.tier-name {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--white);
+  margin-bottom: 0.3rem;
+}
+.tier-subtitle {
+  font-size: 0.75rem;
+  color: var(--gold-dim);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+.tier-price {
+  font-family: var(--serif);
+  font-size: 2rem;
+  color: var(--white);
+  margin-bottom: 0.3rem;
+}
+.tier-price-note {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+.tier ul {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+.tier li {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(42,42,48,0.5);
+  padding-left: 1.2rem;
+  position: relative;
+  font-weight: 300;
+}
+.tier li::before {
+  content: '';
+  position: absolute; left: 0; top: 50%;
+  width: 4px; height: 4px;
+  background: var(--gold-dim);
+  transform: translateY(-50%) rotate(45deg);
+}
+.tier-cta {
+  display: block;
+  text-align: center;
+  padding: 0.8rem;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+.tier-cta:hover { border-color: var(--gold); color: var(--gold); }
+.tier.featured .tier-cta { background: var(--gold); color: var(--bg-primary); border-color: var(--gold); }
+.tier.featured .tier-cta:hover { background: var(--gold-light); }
 
-        /* FOOTER */
-        footer {
-            background: var(--text); color: rgba(255,255,255,0.6);
-            padding: 3rem 2rem; font-size: 0.85rem;
-        }
-        .footer-inner { max-width: 1100px; margin: 0 auto; text-align: center; }
-        .footer-logo {
-            font-family: 'DM Serif Display', serif;
-            color: var(--white); font-size: 1.2rem; margin-bottom: 0.25rem;
-        }
-        .footer-tagline { color: var(--accent-light); font-size: 0.85rem; margin-bottom: 1.5rem; }
-        .footer-links { margin-bottom: 1.5rem; }
-        .footer-links a {
-            color: rgba(255,255,255,0.7); text-decoration: none;
-            margin: 0 0.75rem; font-size: 0.85rem; transition: color 0.2s;
-        }
-        .footer-links a:hover { color: var(--white); }
-        .footer-legal { font-size: 0.75rem; line-height: 1.6; max-width: 700px; margin: 0 auto; }
+.membership-note {
+  text-align: center;
+  margin-top: 2.5rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 300;
+}
+.membership-note strong { color: var(--text-secondary); font-weight: 500; }
 
-        /* RESPONSIVE */
-        @media (max-width: 900px) {
-            .hero-inner { grid-template-columns: 1fr; text-align: center; }
-            .hero h1 { font-size: 2.3rem; }
-            .hero-sub, .hero-support { margin-left: auto; margin-right: auto; }
-            .hero-ctas { justify-content: center; }
-            .hero-visual { margin-top: 2rem; }
-            .diff-grid { grid-template-columns: 1fr; }
-            .steps-grid { grid-template-columns: 1fr; }
-            .services-content { grid-template-columns: 1fr; }
-            .doctor-content { grid-template-columns: 1fr; text-align: center; }
-            .doctor-photo { max-width: 280px; margin: 0 auto; }
-            .nav-links { display: none; }
-            .mobile-toggle { display: block; }
-            .nav-links.open {
-                display: flex; flex-direction: column;
-                position: absolute; top: 72px; left: 0; right: 0;
-                background: var(--white); padding: 1.5rem 2rem;
-                box-shadow: var(--shadow); gap: 1rem;
-            }
-        }
-        @media (max-width: 600px) {
-            .hero { padding: 8rem 1.5rem 4rem; }
-            .hero h1 { font-size: 1.9rem; }
-            section { padding: 3.5rem 1.5rem; }
-        }
-    </style>
+/* ─── DOCTOR ─── */
+.doctor {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.doctor-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 5rem;
+  align-items: center;
+}
+.doctor-visual {
+  display: flex; align-items: center; justify-content: center;
+  height: 400px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+}
+.doctor-monogram {
+  font-family: var(--serif);
+  font-size: 5rem;
+  font-weight: 300;
+  color: var(--gold-dim);
+  letter-spacing: 0.1em;
+}
+.doctor-content h3 {
+  font-family: var(--serif);
+  font-size: 2.2rem;
+  font-weight: 300;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+.doctor-content .credential {
+  font-size: 0.72rem;
+  color: var(--gold-dim);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+.doctor-content p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+  font-weight: 300;
+}
+
+/* ─── CONTACT / CTA ─── */
+.final-cta {
+  padding: 8rem 2rem;
+  text-align: center;
+  position: relative;
+}
+.final-cta::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 50% 70%, rgba(201,169,110,0.04) 0%, transparent 60%);
+}
+.final-cta .section-title { margin-bottom: 1rem; }
+.final-cta p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  max-width: 450px;
+  margin: 0 auto 2.5rem;
+  font-weight: 300;
+  line-height: 1.7;
+}
+.final-cta a {
+  display: inline-block;
+  padding: 1rem 3.5rem;
+  background: var(--gold);
+  color: var(--bg-primary);
+  text-decoration: none;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 0.4s;
+}
+.final-cta a:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+/* ─── FOOTER ─── */
+footer {
+  padding: 3rem 2rem;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+footer p {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  line-height: 1.8;
+}
+footer .footer-logo {
+  font-family: var(--serif);
+  font-size: 0.9rem;
+  color: var(--gold-dim);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+/* ─── ANIMATIONS ─── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 900px) {
+  nav { padding: 1rem 1.5rem; }
+  .nav-links { display: none; flex-direction: column; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--bg-primary); justify-content: center; align-items: center; gap: 2rem; z-index: 99; }
+  .nav-links.open { display: flex; }
+  .nav-toggle { display: block; z-index: 101; }
+  .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .tiers { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto; }
+  .doctor-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .doctor-visual { height: 280px; }
+}
+@media (max-width: 600px) {
+  section { padding: 5rem 1.5rem; }
+  .hero { padding: 7rem 1.5rem 5rem; }
+  .tier { padding: 2rem 1.5rem; }
+}
+</style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-    <div class="nav-inner">
-        <a href="#" class="nav-logo">Contour <span>Performance</span></a>
-        <button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
-            <span></span><span></span><span></span>
-        </button>
-        <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#faq">FAQ</a>
-            <a href="#get-started" class="nav-cta">Get Started →</a>
-        </div>
-    </div>
+<nav id="nav">
+  <div class="nav-logo">Contour</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#philosophy">Philosophy</a></li>
+    <li><a href="#membership">Membership</a></li>
+    <li><a href="#physician">Physician</a></li>
+    <li><a href="#inquire" class="nav-cta">Inquire</a></li>
+  </ul>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-    <div class="hero-inner">
-        <div>
-            <h1>Medicine designed around you — not your&nbsp;insurance&nbsp;company.</h1>
-            <p class="hero-sub">Contour Performance is concierge medicine for people who refuse to settle. A physician — not an NP, not a PA — who blends traditional and functional medicine to optimize your health. Not manage it. Optimize it.</p>
-            <div class="hero-support">Cash concierge practice in Charleston, SC. Limited to ~150 patients. ADHD optimization, performance medicine, and VIP care — all from a doctor who actually knows your name.</div>
-            <div class="hero-ctas">
-                <a href="#get-started" class="btn-primary">Get Started →</a>
-                <a href="#how-it-works" class="btn-secondary">How It Works</a>
-            </div>
-        </div>
-        <div class="hero-visual">
-            <div class="hero-card">
-                <div class="doctor-icon">👨‍⚕️</div>
-                <h3>Dr. Ed O'Bryan, MD</h3>
-                <p class="subtitle">Board-Certified Physician · Performance Medicine</p>
-                <div class="stats">
-                    <div class="stat">
-                        <div class="num">~150</div>
-                        <div class="label">Patient Cap</div>
-                    </div>
-                    <div class="stat">
-                        <div class="num">1:1</div>
-                        <div class="label">MD-Only</div>
-                    </div>
-                    <div class="stat">
-                        <div class="num">Cash</div>
-                        <div class="label">Direct Pay</div>
-                    </div>
-                    <div class="stat">
-                        <div class="num">CHS</div>
-                        <div class="label">Charleston</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+  <p class="hero-eyebrow">Performance Medicine · Unique Care · By Invitation Only</p>
+  <h1>Medicine Designed for Those Who Demand More</h1>
+  <p class="hero-sub">An ultra-private panel of fewer than 70 patients. Physician-led functional, traditional, and longevity medicine — personalized for peak performance.</p>
+  <a href="#inquire" class="hero-cta">Request an Invitation</a>
+  <div class="hero-scroll"></div>
 </section>
 
-<!-- PROBLEM -->
-<section class="problem">
-    <div class="section-inner">
-        <div class="section-header">
-            <h2>Sound familiar?</h2>
+<!-- PHILOSOPHY -->
+<section class="about" id="philosophy">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <span class="section-label">Philosophy</span>
+        <h2 class="section-title">What Is Performance Medicine?</h2>
+        <p>A thoughtful blend of Functional Medicine, Traditional Medicine, and Longevity Medicine — tailoring the most relevant aspects of each discipline into a customized, individualized plan.</p>
+        <p>The goal is simple: help you perform at your best in every aspect of life. Not through shortcuts, but through deep understanding of your unique physiology and a physician who knows you by name.</p>
+      </div>
+      <div class="about-pillars reveal">
+        <div class="pillar">
+          <h4>Functional Medicine</h4>
+          <p>Root-cause investigation through advanced diagnostics and personalized protocols</p>
         </div>
-        <div class="problem-list">
-            <div class="problem-item">
-                <span class="icon">⏰</span>
-                <p>You wait 3 weeks for an appointment, then get 12 minutes with someone reading your chart for the first time</p>
-            </div>
-            <div class="problem-item">
-                <span class="icon">📋</span>
-                <p>Your doctor treats your labs, not you — checking boxes instead of asking questions</p>
-            </div>
-            <div class="problem-item">
-                <span class="icon">💊</span>
-                <p>You've been told you're "fine" when you know you could feel significantly better</p>
-            </div>
-            <div class="problem-item">
-                <span class="icon">🔄</span>
-                <p>You're bouncing between specialists who don't talk to each other</p>
-            </div>
-            <div class="problem-item">
-                <span class="icon">🚪</span>
-                <p>You want a doctor who picks up the phone — not a patient portal that responds in 72 hours</p>
-            </div>
+        <div class="pillar">
+          <h4>Traditional Medicine</h4>
+          <p>Evidence-based clinical care grounded in established medical practice</p>
         </div>
-        <p class="problem-closing">You're not looking for average care. You're looking for a physician who performs at your level.</p>
+        <div class="pillar">
+          <h4>Longevity Medicine</h4>
+          <p>Proactive strategies focused on healthspan, vitality, and sustained performance</p>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 
-<!-- WHAT MAKES US DIFFERENT -->
-<section id="different">
-    <div class="section-inner">
-        <div class="section-header">
-            <h2>Healthcare that actually shows up.</h2>
-        </div>
-        <div class="diff-grid">
-            <div class="diff-card">
-                <div class="icon">🩺</div>
-                <h3>MD-Only Care</h3>
-                <p>Every visit, every call, every decision — Dr. Ed O'Bryan. No handoffs to mid-levels. The person who makes the plan is the person who knows your history.</p>
-            </div>
-            <div class="diff-card">
-                <div class="icon">⚡</div>
-                <h3>Performance Focused</h3>
-                <p>We don't just treat disease — we optimize function. Energy, cognition, sleep, hormones, body composition. Medicine designed to make high performers perform higher.</p>
-            </div>
-            <div class="diff-card">
-                <div class="icon">🧠</div>
-                <h3>ADHD Optimization</h3>
-                <p>Specialized ADHD care that goes beyond stimulants. Peptides, functional protocols, and targeted therapies most practices don't offer — because most practices don't think this way.</p>
-            </div>
-            <div class="diff-card">
-                <div class="icon">🔬</div>
-                <h3>Traditional + Functional</h3>
-                <p>Evidence-based medicine meets root-cause analysis. We look at your labs, your gut, your hormones, your lifestyle — the full picture, not just the chief complaint.</p>
-            </div>
-            <div class="diff-card">
-                <div class="icon">📱</div>
-                <h3>Direct Access</h3>
-                <p>Text your doctor. Get a real answer. Same day. No phone trees, no "a nurse will call you back," no patient portal limbo.</p>
-            </div>
-            <div class="diff-card">
-                <div class="icon">🎯</div>
-                <h3>~150 Patients. Period.</h3>
-                <p>Most doctors see 2,000+ patients. We cap at ~150. That's how you get a physician who actually knows you — not one who's reading your chart while shaking your hand.</p>
-            </div>
-        </div>
+<!-- DIVIDER -->
+<div class="divider">
+  <p class="divider-text reveal">"Fewer than 70 patients. One physician. No compromises on the care you receive."</p>
+</div>
+
+<!-- MEMBERSHIP -->
+<section class="membership" id="membership">
+  <div class="container">
+    <div class="membership-header reveal">
+      <span class="section-label">Membership</span>
+      <h2 class="section-title">Three Pathways, One Standard</h2>
+      <p>Every membership includes direct physician access and 24/7 telehealth. Choose the pathway that matches where you are in your health journey.</p>
+      <div class="pricing-badge">$149 / month · All Pathways<span>· HSA Qualified · Save $100 annually</span></div>
     </div>
+
+    <div class="tiers">
+      <!-- MAINTENANCE -->
+      <div class="tier reveal">
+        <div class="tier-name">Maintenance</div>
+        <div class="tier-subtitle">Foundation Care</div>
+        <div class="tier-price">No Upfront Fee</div>
+        <div class="tier-price-note">$149/month membership</div>
+        <ul>
+          <li>Direct MD access — Dr. O'Bryan</li>
+          <li>Treatment of existing conditions</li>
+          <li>Insurance-covered labs &amp; prescriptions</li>
+          <li>ADHD · Weight management (GLP-1s)</li>
+          <li>Hormones · Cholesterol · More</li>
+          <li>Telehealth access 24/7/365</li>
+          <li>10% off supplements &amp; services</li>
+        </ul>
+        <a href="#inquire" class="tier-cta">Get Started</a>
+      </div>
+
+      <!-- PERFORMANCE -->
+      <div class="tier featured reveal">
+        <div class="tier-name">Performance</div>
+        <div class="tier-subtitle">Deep Discovery</div>
+        <div class="tier-price">$800 Upfront</div>
+        <div class="tier-price-note">+ $149/month membership</div>
+        <ul>
+          <li>Everything in Maintenance</li>
+          <li>GI Map stool testing</li>
+          <li>Custom lab panel</li>
+          <li>IgE food allergy testing</li>
+          <li>Functional health plan</li>
+          <li>1 coaching session</li>
+          <li>At-home blood draw included</li>
+          <li>15% off supplements &amp; services</li>
+        </ul>
+        <a href="#inquire" class="tier-cta">Get Started</a>
+      </div>
+
+      <!-- PEAK -->
+      <div class="tier reveal">
+        <div class="tier-name">Peak Performance</div>
+        <div class="tier-subtitle">Total Optimization</div>
+        <div class="tier-price">$1,200 Upfront</div>
+        <div class="tier-price-note">+ $149/month membership</div>
+        <ul>
+          <li>Everything in Performance</li>
+          <li>VO₂ Max testing</li>
+          <li>DEXA body composition scan</li>
+          <li>Basal metabolic rate testing</li>
+          <li>Sweat &amp; longevity testing</li>
+          <li>Aging &amp; neuro-endocrine analysis</li>
+          <li>Exercise plan + 2 coaching sessions</li>
+          <li>24/7 direct MD access</li>
+          <li>20% off supplements &amp; services</li>
+        </ul>
+        <a href="#inquire" class="tier-cta">Get Started</a>
+      </div>
+    </div>
+
+    <p class="membership-note reveal"><strong>Month-to-month</strong> — no long-term commitment required. Cancel anytime.</p>
+  </div>
 </section>
 
-<!-- HOW IT WORKS -->
-<section class="steps" id="how-it-works">
-    <div class="section-inner">
-        <div class="section-header">
-            <h2>Three steps. No hoops.</h2>
-        </div>
-        <div class="steps-grid">
-            <div class="step">
-                <div class="step-num">1</div>
-                <h3>Book a Consultation</h3>
-                <p>We'll have an honest conversation about your health goals, what you're frustrated with, and whether Contour Performance is the right fit.</p>
-            </div>
-            <div class="step">
-                <div class="step-num">2</div>
-                <h3>Get Your Plan</h3>
-                <p>Dr. O'Bryan does a comprehensive evaluation — deep labs, full history, functional assessment — and builds a plan tailored to you. Not a template.</p>
-            </div>
-            <div class="step">
-                <div class="step-num">3</div>
-                <h3>Perform</h3>
-                <p>Ongoing care, direct access, proactive adjustments. A doctor who's invested in your outcomes — not just your annual physical.</p>
-            </div>
-        </div>
-        <div style="text-align: center; margin-top: 2.5rem;">
-            <a href="#get-started" class="btn-primary">Book Your Consultation →</a>
-        </div>
+<!-- PHYSICIAN -->
+<section class="doctor" id="physician">
+  <div class="container">
+    <div class="doctor-inner">
+      <div class="doctor-visual reveal">
+        <div class="doctor-monogram">DO</div>
+      </div>
+      <div class="doctor-content reveal">
+        <span class="section-label">Your Physician</span>
+        <h3>Dr. O'Bryan</h3>
+        <p class="credential">Functional &amp; Performance Medicine</p>
+        <p>With a practice intentionally limited to fewer than 70 patients, Dr. O'Bryan provides a level of access and attention that traditional healthcare simply cannot offer.</p>
+        <p>Every patient receives a direct line to their physician — not a call center, not a nurse triage line. This is medicine built around a relationship, not a transaction.</p>
+      </div>
     </div>
-</section>
-
-<!-- SERVICES -->
-<section id="services">
-    <div class="section-inner">
-        <div class="section-header">
-            <h2>What's included</h2>
-            <p>The Contour Performance Membership</p>
-        </div>
-        <div class="services-content">
-            <ul class="services-list">
-                <li>
-                    <span class="check">✓</span>
-                    <div>
-                        <h4>Dedicated physician access</h4>
-                        <p>Dr. Ed O'Bryan, MD — every visit, every time. Not a rotating roster.</p>
-                    </div>
-                </li>
-                <li>
-                    <span class="check">✓</span>
-                    <div>
-                        <h4>Comprehensive initial evaluation</h4>
-                        <p>Deep-dive labs, full history, functional assessment. We find what others miss.</p>
-                    </div>
-                </li>
-                <li>
-                    <span class="check">✓</span>
-                    <div>
-                        <h4>Performance optimization</h4>
-                        <p>Energy, cognition, hormones, sleep, body composition — personalized protocols.</p>
-                    </div>
-                </li>
-                <li>
-                    <span class="check">✓</span>
-                    <div>
-                        <h4>ADHD management</h4>
-                        <p>Stimulants, non-stimulants, peptides, functional protocols — whatever your brain needs.</p>
-                    </div>
-                </li>
-                <li>
-                    <span class="check">✓</span>
-                    <div>
-                        <h4>Direct communication</h4>
-                        <p>Text or call your doctor. Same-day responses. No gatekeepers.</p>
-                    </div>
-                </li>
-                <li>
-                    <span class="check">✓</span>
-                    <div>
-                        <h4>Functional medicine integration</h4>
-                        <p>Gut health, nutrition, inflammation, hormonal balance — root cause, not band-aids.</p>
-                    </div>
-                </li>
-                <li>
-                    <span class="check">✓</span>
-                    <div>
-                        <h4>Proactive health management</h4>
-                        <p>We don't wait for problems. We anticipate them. Advanced screening, preventive protocols.</p>
-                    </div>
-                </li>
-            </ul>
-            <div class="services-sidebar">
-                <h3>The Contour difference</h3>
-                <ul>
-                    <li>~150 patient cap — you're never a number</li>
-                    <li>Same-day or next-day appointments</li>
-                    <li>Unhurried visits — 30-60 minutes, every time</li>
-                    <li>No insurance middlemen — cash pay, transparent pricing</li>
-                    <li>Coordination with your specialists when needed</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- DOCTOR -->
-<section class="doctor" id="about">
-    <div class="section-inner">
-        <div class="section-header">
-            <h2>Meet Your Doctor</h2>
-        </div>
-        <div class="doctor-content">
-            <div class="doctor-photo">👨‍⚕️</div>
-            <div class="doctor-bio">
-                <h2>Dr. Ed O'Bryan, MD</h2>
-                <p class="title">Board-Certified Physician · Performance Medicine · Charleston, SC</p>
-                <p>Dr. O'Bryan founded Contour Performance because he was tired of a system that rewards volume over value. He saw too many patients getting "fine" care from doctors who were too overwhelmed to go deeper.</p>
-                <p>With training in both traditional and functional medicine, he brings a perspective most physicians don't have — and a patient panel small enough to actually use it. He looks at the full picture: neurochemistry, gut health, hormones, sleep, stress — because health doesn't exist in silos, and your treatment shouldn't either.</p>
-                <p>He caps his practice at ~150 patients because that's the number where exceptional care is still possible. Where he knows your name, your family, your goals — not just your chart.</p>
-                <div class="doctor-quote">"I didn't go into medicine to see 30 patients a day and spend more time on paperwork than people. I went into medicine to actually help — and that requires time, attention, and giving a damn."</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- PRICING -->
-<section id="pricing">
-    <div class="section-inner">
-        <div class="section-header">
-            <h2>Transparent pricing. Exceptional care.</h2>
-        </div>
-        <div class="pricing-card">
-            <div class="pricing-label">Monthly Membership</div>
-            <div class="pricing-amount">
-                <span class="dollar">$</span><span class="price">TBD</span><span class="period">/month</span>
-            </div>
-            <p class="pricing-note">Direct-pay. No insurance games. No hidden fees.</p>
-            <ul class="pricing-features">
-                <li>Dedicated physician access — Dr. Ed O'Bryan, every visit</li>
-                <li>Comprehensive evaluation + advanced labs</li>
-                <li>Personalized performance & health optimization plan</li>
-                <li>ADHD management (stimulants, peptides, functional protocols)</li>
-                <li>Direct communication — text or call your doctor</li>
-                <li>Unhurried visits (30-60 min)</li>
-                <li>Functional medicine integration</li>
-                <li>Same-day or next-day scheduling</li>
-            </ul>
-            <a href="#get-started" class="btn-primary" style="width: 100%; justify-content: center; font-size: 1.05rem;">Get Started →</a>
-        </div>
-    </div>
-</section>
-
-<!-- FAQ -->
-<section class="faq" id="faq">
-    <div class="section-inner">
-        <div class="section-header">
-            <h2>Questions you probably have</h2>
-        </div>
-        <div class="faq-list">
-            <div class="faq-item">
-                <button class="faq-q">What is concierge medicine?</button>
-                <div class="faq-a">Concierge medicine is a membership-based model where you pay a monthly or annual fee for enhanced access to your physician. Smaller patient panels mean longer visits, same-day availability, and a doctor who actually knows you. It's healthcare the way it should work.</div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-q">Why MD-only? What's wrong with NPs and PAs?</button>
-                <div class="faq-a">Nothing — they're great for a lot of things. But complex medication management, performance optimization, and ADHD care require a physician's depth of training. We believe you deserve that for decisions affecting your brain chemistry and long-term health.</div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-q">What do you mean by "performance medicine"?</button>
-                <div class="faq-a">Performance medicine goes beyond treating disease. We optimize the factors that determine how well you function — energy, cognition, sleep quality, hormonal balance, body composition, stress resilience. Whether you're an executive, entrepreneur, or athlete, we help you operate at your ceiling, not your floor.</div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-q">Do you specialize in ADHD?</button>
-                <div class="faq-a">Yes. ADHD optimization is a core part of what we do. We go beyond standard stimulant management — incorporating peptides, functional medicine protocols, and targeted therapies to help your brain work at its best.</div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-q">What does "functional medicine" mean?</button>
-                <div class="faq-a">Functional medicine looks at root causes, not just symptoms. We evaluate gut health, nutrition, sleep, inflammation, and hormonal balance — the factors that conventional medicine often overlooks but that dramatically affect how you feel and function.</div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-q">Why only ~150 patients?</button>
-                <div class="faq-a">Because that's the number where genuine, relationship-based care is possible. Most primary care doctors carry 2,000+ patients. At 150, Dr. O'Bryan knows your history, your goals, and your family — not just your diagnosis codes.</div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-q">Do you accept insurance?</button>
-                <div class="faq-a">Contour Performance is a direct-pay practice. We don't bill insurance. This eliminates the bureaucracy that forces most doctors into 10-minute visits and lets us spend real time on your care. Many patients find the membership costs less than their annual copays and deductibles.</div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-q">Do I still need a primary care doctor?</button>
-                <div class="faq-a">Contour Performance can serve as your primary care — or as a specialist complement to your existing PCP. We'll discuss the best setup for your situation during your consultation.</div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-q">How do I get started?</button>
-                <div class="faq-a">Book a consultation below. We'll have an honest conversation about your health goals and whether Contour Performance is the right fit. No pressure, no sales pitch — just a real conversation with a real doctor.</div>
-            </div>
-        </div>
-    </div>
+  </div>
 </section>
 
 <!-- FINAL CTA -->
-<section class="final-cta" id="get-started">
-    <h2>Ready for medicine that matches your ambition?</h2>
-    <p>You invest in your business, your fitness, your family. It's time to invest in a doctor who invests back in you.</p>
-    <p>Contour Performance is concierge medicine for people who demand more — more time, more access, more answers, and a physician who performs at your level.</p>
-    <p class="price-line">~150 patients. One physician. Medicine without compromise.</p>
-    <a href="#" class="btn-white">Get Started →</a>
-    <p class="sub-cta">Not ready to commit? <a href="#">Book a free consultation</a> to see if we're the right fit.</p>
+<section class="final-cta" id="inquire">
+  <div class="container reveal">
+    <span class="section-label">Begin</span>
+    <h2 class="section-title">Ready to Experience<br>a Different Standard of Care?</h2>
+    <p>Membership is limited. If you're ready to work with a physician who prioritizes depth over volume, we'd like to hear from you.</p>
+    <a href="mailto:info@contour-performance.com">Request an Invitation</a>
+  </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-    <div class="footer-inner">
-        <div class="footer-logo">Contour Performance</div>
-        <p class="footer-tagline">Medicine designed around you.</p>
-        <div class="footer-links">
-            <a href="#">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#faq">FAQ</a>
-            <a href="#">Contact</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-        </div>
-        <p class="footer-legal">Contour Performance is a concierge medical practice located in Charleston, South Carolina. All care is provided by a licensed, board-certified physician. Contour Performance does not bill insurance. All prescribing follows applicable state and federal regulations.</p>
-        <p style="margin-top: 1rem; font-size: 0.75rem;">© 2026 Contour Performance. All rights reserved.</p>
-    </div>
+  <div class="footer-logo">Contour Performance Health</div>
+  <p>&copy; 2025 Contour Performance Health. All rights reserved.<br>This site does not provide medical advice. Consult your physician for personalized recommendations.</p>
 </footer>
 
 <script>
-document.querySelectorAll('.faq-q').forEach(btn => {
-    btn.addEventListener('click', () => {
-        const answer = btn.nextElementSibling;
-        const isOpen = btn.classList.contains('active');
-        document.querySelectorAll('.faq-q').forEach(b => { b.classList.remove('active'); b.nextElementSibling.classList.remove('active'); });
-        if (!isOpen) { btn.classList.add('active'); answer.classList.add('active'); }
-    });
+// Nav scroll
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 50);
 });
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', e => {
-        const target = document.querySelector(a.getAttribute('href'));
-        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); document.querySelector('.nav-links')?.classList.remove('open'); }
-    });
-});
-</script>
 
+// Mobile menu
+const toggle = document.getElementById('navToggle');
+const links = document.getElementById('navLinks');
+toggle.addEventListener('click', () => {
+  links.classList.toggle('open');
+});
+links.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => links.classList.remove('open'));
+});
+
+// Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.15 });
+reveals.forEach(el => observer.observe(el));
+</script>
 </body>
 </html>
