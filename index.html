@@ -4,30 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contour Performance | Concierge Medicine — Charleston, SC</title>
-    <meta name="description" content="Concierge medical practice in Charleston, SC. MD-only care blending traditional + functional medicine. ADHD, performance optimization, and VIP health management. ~$150/mo.">
-    <meta property="og:title" content="Medicine That Performs as Hard as You Do">
-    <meta property="og:description" content="Contour Performance — concierge medicine from an MD who blends traditional and functional approaches. Charleston, SC.">
+    <meta name="description" content="Concierge medical practice in Charleston, SC. Performance medicine, ADHD optimization, VIP care. Limited to ~150 patients. Dr. Ed O'Bryan, MD.">
+    <meta property="og:title" content="Contour Performance — Medicine Designed Around You">
+    <meta property="og:description" content="Concierge medical care for high performers. ADHD optimization, functional medicine, and VIP access — from a physician who actually knows you.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://contour-performance.com">
     <link rel="canonical" href="https://contour-performance.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Serif+Display&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #0F2027;
-            --primary-light: #203A43;
-            --accent: #2C7873;
-            --accent-light: #D4EDDA;
-            --warm: #D4A574;
-            --bg: #FAFAFA;
-            --bg-alt: #F2F4F3;
+            --primary: #1a1a2e;
+            --primary-light: #2d2d44;
+            --accent: #c9a55a;
+            --accent-light: #f0e6cc;
+            --warm: #c9a55a;
+            --bg: #fafaf8;
+            --bg-alt: #f3f2ee;
             --text: #1a1a2e;
-            --text-light: #555B6E;
+            --text-light: #5a5a6e;
             --white: #ffffff;
             --radius: 12px;
-            --shadow: 0 4px 24px rgba(15,32,39,0.08);
-            --shadow-lg: 0 12px 48px rgba(15,32,39,0.12);
+            --shadow: 0 4px 24px rgba(26,26,46,0.06);
+            --shadow-lg: 0 12px 48px rgba(26,26,46,0.10);
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
@@ -41,15 +41,16 @@
         nav {
             position: fixed; top: 0; width: 100%; z-index: 100;
             background: rgba(255,255,255,0.95); backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(15,32,39,0.06); padding: 0 2rem;
+            border-bottom: 1px solid rgba(26,26,46,0.06); padding: 0 2rem;
         }
         .nav-inner {
             max-width: 1200px; margin: 0 auto;
             display: flex; align-items: center; justify-content: space-between; height: 72px;
         }
         .nav-logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.4rem; font-weight: 700; color: var(--primary); text-decoration: none;
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.4rem; font-weight: 400; color: var(--primary); text-decoration: none;
+            letter-spacing: -0.01em;
         }
         .nav-logo span { color: var(--accent); }
         .nav-links { display: flex; gap: 2rem; align-items: center; }
@@ -70,13 +71,13 @@
         /* HERO */
         .hero {
             padding: 10rem 2rem 6rem;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 40%, var(--accent) 100%);
-            position: relative; overflow: hidden; color: var(--white);
+            background: linear-gradient(160deg, var(--bg) 0%, var(--bg-alt) 40%, #e8e4da 100%);
+            position: relative; overflow: hidden;
         }
         .hero::after {
-            content: ''; position: absolute; top: -50%; right: -20%;
+            content: ''; position: absolute; top: -40%; right: -15%;
             width: 600px; height: 600px;
-            background: radial-gradient(circle, rgba(44,120,115,0.2) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(201,165,90,0.1) 0%, transparent 70%);
             border-radius: 50%;
         }
         .hero-inner {
@@ -85,45 +86,45 @@
             align-items: center; position: relative; z-index: 1;
         }
         .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem; line-height: 1.15; font-weight: 700;
-            color: var(--white); margin-bottom: 1.5rem;
+            font-family: 'DM Serif Display', serif;
+            font-size: 3.2rem; line-height: 1.12; font-weight: 400;
+            color: var(--primary); margin-bottom: 1.5rem;
         }
         .hero-sub {
-            font-size: 1.1rem; color: rgba(255,255,255,0.85);
+            font-size: 1.1rem; color: var(--text-light);
             margin-bottom: 2rem; max-width: 520px; line-height: 1.7;
         }
         .hero-support {
-            font-size: 0.95rem; color: rgba(255,255,255,0.8);
+            font-size: 0.95rem; color: var(--text-light);
             margin-bottom: 2rem; padding: 1rem 1.25rem;
-            background: rgba(255,255,255,0.1); border-radius: 10px;
-            border-left: 3px solid var(--warm); max-width: 520px;
+            background: var(--white); border-radius: 10px;
+            border-left: 3px solid var(--accent); max-width: 520px;
         }
         .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
         .btn-primary {
             display: inline-flex; align-items: center; gap: 0.5rem;
-            background: var(--warm); color: var(--primary);
+            background: var(--primary); color: var(--white);
             padding: 1rem 2rem; border-radius: 10px;
             font-size: 1rem; font-weight: 600; text-decoration: none;
             transition: all 0.2s; border: none; cursor: pointer;
         }
-        .btn-primary:hover { transform: translateY(-1px); box-shadow: var(--shadow); filter: brightness(1.1); }
+        .btn-primary:hover { background: var(--primary-light); transform: translateY(-1px); box-shadow: var(--shadow); }
         .btn-secondary {
             display: inline-flex; align-items: center; gap: 0.5rem;
-            background: transparent; color: var(--white);
+            background: var(--white); color: var(--primary);
             padding: 1rem 2rem; border-radius: 10px;
             font-size: 1rem; font-weight: 600; text-decoration: none;
-            border: 2px solid rgba(255,255,255,0.4); transition: all 0.2s;
+            border: 2px solid var(--primary); transition: all 0.2s;
         }
-        .btn-secondary:hover { background: rgba(255,255,255,0.1); }
+        .btn-secondary:hover { background: var(--bg-alt); }
         .hero-visual { display: flex; justify-content: center; align-items: center; }
         .hero-card {
             background: var(--white); border-radius: 20px;
-            padding: 2.5rem; box-shadow: var(--shadow-lg); max-width: 380px; width: 100%; color: var(--text);
+            padding: 2.5rem; box-shadow: var(--shadow-lg); max-width: 380px; width: 100%;
         }
         .hero-card .doctor-icon {
             width: 80px; height: 80px; border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
+            background: linear-gradient(135deg, var(--primary), #3d3d5c);
             display: flex; align-items: center; justify-content: center;
             font-size: 2rem; margin-bottom: 1.5rem; color: white;
         }
@@ -139,7 +140,7 @@
         .section-inner { max-width: 1100px; margin: 0 auto; }
         .section-header { text-align: center; margin-bottom: 3.5rem; }
         .section-header h2 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'DM Serif Display', serif;
             font-size: 2.2rem; color: var(--primary); margin-bottom: 0.75rem;
         }
         .section-header p { color: var(--text-light); font-size: 1.05rem; max-width: 600px; margin: 0 auto; }
@@ -158,7 +159,7 @@
         .problem-closing {
             text-align: center; font-size: 1.1rem; font-weight: 600;
             color: var(--primary); margin-top: 2.5rem;
-            font-family: 'Playfair Display', serif;
+            font-family: 'DM Serif Display', serif;
         }
 
         /* DIFFERENTIATORS */
@@ -200,7 +201,7 @@
         .services-list li:last-child { border-bottom: none; }
         .services-list .check {
             flex-shrink: 0; width: 28px; height: 28px; border-radius: 8px;
-            background: var(--accent-light); color: var(--accent);
+            background: var(--accent-light); color: var(--primary);
             display: flex; align-items: center; justify-content: center;
             font-weight: 700; font-size: 0.9rem; margin-top: 0.1rem;
         }
@@ -211,7 +212,8 @@
         }
         .services-sidebar h3 { font-size: 1rem; color: var(--primary); margin-bottom: 1rem; font-weight: 700; }
         .services-sidebar li {
-            list-style: none; padding: 0.5rem 0; font-size: 0.88rem; color: var(--text-light);
+            list-style: none; padding: 0.5rem 0;
+            font-size: 0.88rem; color: var(--text-light);
             display: flex; gap: 0.5rem; align-items: flex-start;
         }
         .services-sidebar li::before { content: '—'; color: var(--warm); font-weight: 700; }
@@ -222,13 +224,13 @@
             display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; align-items: center;
         }
         .doctor-photo {
-            background: linear-gradient(135deg, var(--primary), var(--accent));
+            background: linear-gradient(135deg, var(--primary), #3d3d5c);
             border-radius: 20px; aspect-ratio: 3/4;
             display: flex; align-items: center; justify-content: center;
             color: white; font-size: 4rem;
         }
         .doctor-bio h2 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'DM Serif Display', serif;
             font-size: 2rem; color: var(--primary); margin-bottom: 0.5rem;
         }
         .doctor-bio .title { color: var(--accent); font-weight: 600; margin-bottom: 1.5rem; font-size: 1.05rem; }
@@ -255,7 +257,6 @@
             color: var(--accent); font-weight: 700; margin-bottom: 0.5rem;
         }
         .pricing-amount { margin-bottom: 0.5rem; }
-        .pricing-amount .tilde { font-size: 2rem; font-weight: 700; color: var(--text-light); }
         .pricing-amount .dollar { font-size: 2rem; font-weight: 700; color: var(--primary); vertical-align: top; }
         .pricing-amount .price { font-size: 4rem; font-weight: 800; color: var(--primary); line-height: 1; }
         .pricing-amount .period { font-size: 1.1rem; color: var(--text-light); }
@@ -293,16 +294,14 @@
 
         /* FINAL CTA */
         .final-cta {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
             padding: 5rem 2rem; text-align: center; color: var(--white);
         }
         .final-cta h2 {
-            font-family: 'Playfair Display', serif; font-size: 2.4rem; margin-bottom: 1.5rem;
+            font-family: 'DM Serif Display', serif; font-size: 2.4rem; margin-bottom: 1.5rem;
         }
         .final-cta p { font-size: 1.05rem; opacity: 0.9; max-width: 600px; margin: 0 auto 1rem; line-height: 1.7; }
-        .final-cta .price-line {
-            font-size: 1.2rem; font-weight: 700; margin: 1.5rem 0 2rem; opacity: 1;
-        }
+        .final-cta .price-line { font-size: 1.2rem; font-weight: 700; margin: 1.5rem 0 2rem; opacity: 1; }
         .btn-white {
             display: inline-flex; align-items: center; gap: 0.5rem;
             background: var(--white); color: var(--primary);
@@ -316,12 +315,12 @@
 
         /* FOOTER */
         footer {
-            background: var(--primary); color: rgba(255,255,255,0.6);
+            background: var(--text); color: rgba(255,255,255,0.6);
             padding: 3rem 2rem; font-size: 0.85rem;
         }
         .footer-inner { max-width: 1100px; margin: 0 auto; text-align: center; }
         .footer-logo {
-            font-family: 'Playfair Display', serif;
+            font-family: 'DM Serif Display', serif;
             color: var(--white); font-size: 1.2rem; margin-bottom: 0.25rem;
         }
         .footer-tagline { color: var(--accent-light); font-size: 0.85rem; margin-bottom: 1.5rem; }
@@ -384,9 +383,9 @@
 <section class="hero">
     <div class="hero-inner">
         <div>
-            <h1>Medicine that performs as hard as you&nbsp;do.</h1>
-            <p class="hero-sub">Contour Performance is concierge medicine for high-performers who refuse to settle for reactive, assembly-line healthcare. MD-only care that blends traditional and functional medicine — built around you, not a billing code.</p>
-            <div class="hero-support">Cash-pay concierge practice in Charleston, SC. ~$150/month. ADHD optimization, performance medicine, and VIP primary care from a physician who actually knows your name.</div>
+            <h1>Medicine designed around you — not your&nbsp;insurance&nbsp;company.</h1>
+            <p class="hero-sub">Contour Performance is concierge medicine for people who refuse to settle. A physician — not an NP, not a PA — who blends traditional and functional medicine to optimize your health. Not manage it. Optimize it.</p>
+            <div class="hero-support">Cash concierge practice in Charleston, SC. Limited to ~150 patients. ADHD optimization, performance medicine, and VIP care — all from a doctor who actually knows your name.</div>
             <div class="hero-ctas">
                 <a href="#get-started" class="btn-primary">Get Started →</a>
                 <a href="#how-it-works" class="btn-secondary">How It Works</a>
@@ -399,16 +398,16 @@
                 <p class="subtitle">Board-Certified Physician · Performance Medicine</p>
                 <div class="stats">
                     <div class="stat">
-                        <div class="num">~$150</div>
-                        <div class="label">Per Month</div>
-                    </div>
-                    <div class="stat">
                         <div class="num">~150</div>
                         <div class="label">Patient Cap</div>
                     </div>
                     <div class="stat">
                         <div class="num">1:1</div>
                         <div class="label">MD-Only</div>
+                    </div>
+                    <div class="stat">
+                        <div class="num">Cash</div>
+                        <div class="label">Direct Pay</div>
                     </div>
                     <div class="stat">
                         <div class="num">CHS</div>
@@ -429,26 +428,26 @@
         <div class="problem-list">
             <div class="problem-item">
                 <span class="icon">⏰</span>
-                <p>Your doctor sees 30 patients a day and gives you 7 minutes — if you're lucky</p>
+                <p>You wait 3 weeks for an appointment, then get 12 minutes with someone reading your chart for the first time</p>
             </div>
             <div class="problem-item">
                 <span class="icon">📋</span>
-                <p>You get treated for symptoms, never root causes. Same labs, same script, see you in 90 days</p>
-            </div>
-            <div class="problem-item">
-                <span class="icon">🔄</span>
-                <p>You're "healthy" by standard metrics but you know you're not performing at your potential</p>
+                <p>Your doctor treats your labs, not you — checking boxes instead of asking questions</p>
             </div>
             <div class="problem-item">
                 <span class="icon">💊</span>
-                <p>Your ADHD treatment is a prescription refill, not a performance strategy</p>
+                <p>You've been told you're "fine" when you know you could feel significantly better</p>
+            </div>
+            <div class="problem-item">
+                <span class="icon">🔄</span>
+                <p>You're bouncing between specialists who don't talk to each other</p>
             </div>
             <div class="problem-item">
                 <span class="icon">🚪</span>
-                <p>You can't get your doctor on the phone when something actually matters</p>
+                <p>You want a doctor who picks up the phone — not a patient portal that responds in 72 hours</p>
             </div>
         </div>
-        <p class="problem-closing">Healthcare wasn't built for people who demand more from themselves. Contour Performance was.</p>
+        <p class="problem-closing">You're not looking for average care. You're looking for a physician who performs at your level.</p>
     </div>
 </section>
 
@@ -456,38 +455,38 @@
 <section id="different">
     <div class="section-inner">
         <div class="section-header">
-            <h2>Healthcare that keeps up with you.</h2>
+            <h2>Healthcare that actually shows up.</h2>
         </div>
         <div class="diff-grid">
             <div class="diff-card">
                 <div class="icon">🩺</div>
                 <h3>MD-Only Care</h3>
-                <p>Every visit is with Dr. Ed O'Bryan — a physician, not a mid-level. No handoffs, no rotating providers. The person making your treatment decisions knows your full story.</p>
+                <p>Every visit, every call, every decision — Dr. Ed O'Bryan. No handoffs to mid-levels. The person who makes the plan is the person who knows your history.</p>
             </div>
             <div class="diff-card">
                 <div class="icon">⚡</div>
-                <h3>Performance-Focused</h3>
-                <p>We don't just manage disease — we optimize function. Cognitive performance, energy, body composition, hormones, sleep. Medicine designed around how you want to perform, not just whether you're "sick."</p>
+                <h3>Performance Focused</h3>
+                <p>We don't just treat disease — we optimize function. Energy, cognition, sleep, hormones, body composition. Medicine designed to make high performers perform higher.</p>
             </div>
             <div class="diff-card">
                 <div class="icon">🧠</div>
-                <h3>ADHD Specialty</h3>
-                <p>Deep expertise in adult ADHD — stimulants, non-stimulants, peptides, and functional protocols most practices don't even consider. Treatment that goes way beyond "here's your Adderall."</p>
+                <h3>ADHD Optimization</h3>
+                <p>Specialized ADHD care that goes beyond stimulants. Peptides, functional protocols, and targeted therapies most practices don't offer — because most practices don't think this way.</p>
             </div>
             <div class="diff-card">
                 <div class="icon">🔬</div>
                 <h3>Traditional + Functional</h3>
-                <p>We don't pick sides. Evidence-based medicine combined with functional approaches — gut health, nutrition, hormones, inflammation — because your body doesn't work in isolated systems.</p>
+                <p>Evidence-based medicine meets root-cause analysis. We look at your labs, your gut, your hormones, your lifestyle — the full picture, not just the chief complaint.</p>
             </div>
             <div class="diff-card">
                 <div class="icon">📱</div>
                 <h3>Direct Access</h3>
-                <p>Text your doctor. Get a real answer. No phone trees, no waiting 3 weeks for an appointment. With a capped panel of ~150 patients, you actually get the access you're paying for.</p>
+                <p>Text your doctor. Get a real answer. Same day. No phone trees, no "a nurse will call you back," no patient portal limbo.</p>
             </div>
             <div class="diff-card">
                 <div class="icon">🎯</div>
-                <h3>Capped Panel</h3>
-                <p>We intentionally limit our practice to ~150 patients. Fewer patients means more time, deeper relationships, and better outcomes. When we're full, we're full.</p>
+                <h3>~150 Patients. Period.</h3>
+                <p>Most doctors see 2,000+ patients. We cap at ~150. That's how you get a physician who actually knows you — not one who's reading your chart while shaking your hand.</p>
             </div>
         </div>
     </div>
@@ -503,17 +502,17 @@
             <div class="step">
                 <div class="step-num">1</div>
                 <h3>Book a Consultation</h3>
-                <p>Tell us about yourself and your goals. We'll have an honest conversation about whether Contour Performance is the right fit — no pressure, no sales pitch.</p>
+                <p>We'll have an honest conversation about your health goals, what you're frustrated with, and whether Contour Performance is the right fit.</p>
             </div>
             <div class="step">
                 <div class="step-num">2</div>
                 <h3>Get Your Plan</h3>
-                <p>Dr. O'Bryan reviews your full history, runs targeted labs, and builds a treatment and optimization plan tailored to your specific physiology. Not a template.</p>
+                <p>Dr. O'Bryan does a comprehensive evaluation — deep labs, full history, functional assessment — and builds a plan tailored to you. Not a template.</p>
             </div>
             <div class="step">
                 <div class="step-num">3</div>
                 <h3>Perform</h3>
-                <p>Regular check-ins, real-time adjustments, direct physician access. Ongoing optimization — not maintenance. This is what concierge care is supposed to feel like.</p>
+                <p>Ongoing care, direct access, proactive adjustments. A doctor who's invested in your outcomes — not just your annual physical.</p>
             </div>
         </div>
         <div style="text-align: center; margin-top: 2.5rem;">
@@ -527,7 +526,7 @@
     <div class="section-inner">
         <div class="section-header">
             <h2>What's included</h2>
-            <p>The Contour Performance Membership — ~$150/month</p>
+            <p>The Contour Performance Membership</p>
         </div>
         <div class="services-content">
             <ul class="services-list">
@@ -535,60 +534,60 @@
                     <span class="check">✓</span>
                     <div>
                         <h4>Dedicated physician access</h4>
-                        <p>Dr. Ed O'Bryan, MD — every visit. Not a rotating cast of providers.</p>
+                        <p>Dr. Ed O'Bryan, MD — every visit, every time. Not a rotating roster.</p>
                     </div>
                 </li>
                 <li>
                     <span class="check">✓</span>
                     <div>
                         <h4>Comprehensive initial evaluation</h4>
-                        <p>Full history, advanced labs, understanding your unique physiology and goals.</p>
+                        <p>Deep-dive labs, full history, functional assessment. We find what others miss.</p>
                     </div>
                 </li>
                 <li>
                     <span class="check">✓</span>
                     <div>
-                        <h4>ADHD optimization</h4>
-                        <p>Stimulants, non-stimulants, peptides, functional protocols — the full toolkit for cognitive performance.</p>
+                        <h4>Performance optimization</h4>
+                        <p>Energy, cognition, hormones, sleep, body composition — personalized protocols.</p>
                     </div>
                 </li>
                 <li>
                     <span class="check">✓</span>
                     <div>
-                        <h4>Performance medicine</h4>
-                        <p>Hormones, body composition, energy, sleep architecture — medicine designed around how you want to perform.</p>
-                    </div>
-                </li>
-                <li>
-                    <span class="check">✓</span>
-                    <div>
-                        <h4>Regular check-ins + adjustments</h4>
-                        <p>Ongoing optimization, not just refill rubber-stamps.</p>
+                        <h4>ADHD management</h4>
+                        <p>Stimulants, non-stimulants, peptides, functional protocols — whatever your brain needs.</p>
                     </div>
                 </li>
                 <li>
                     <span class="check">✓</span>
                     <div>
                         <h4>Direct communication</h4>
-                        <p>Message your doctor directly. Get a real answer. Novel concept.</p>
+                        <p>Text or call your doctor. Same-day responses. No gatekeepers.</p>
                     </div>
                 </li>
                 <li>
                     <span class="check">✓</span>
                     <div>
                         <h4>Functional medicine integration</h4>
-                        <p>Gut health, nutrition, inflammation markers, advanced diagnostics — the stuff that separates "fine" from "optimal."</p>
+                        <p>Gut health, nutrition, inflammation, hormonal balance — root cause, not band-aids.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="check">✓</span>
+                    <div>
+                        <h4>Proactive health management</h4>
+                        <p>We don't wait for problems. We anticipate them. Advanced screening, preventive protocols.</p>
                     </div>
                 </li>
             </ul>
             <div class="services-sidebar">
-                <h3>Good to know</h3>
+                <h3>The Contour difference</h3>
                 <ul>
-                    <li>Cash-pay practice — no insurance billing</li>
-                    <li>Adults 18+ only</li>
-                    <li>Charleston, SC based</li>
-                    <li>~150 patient cap — limited availability</li>
-                    <li>Cancel anytime</li>
+                    <li>~150 patient cap — you're never a number</li>
+                    <li>Same-day or next-day appointments</li>
+                    <li>Unhurried visits — 30-60 minutes, every time</li>
+                    <li>No insurance middlemen — cash pay, transparent pricing</li>
+                    <li>Coordination with your specialists when needed</li>
                 </ul>
             </div>
         </div>
@@ -605,11 +604,11 @@
             <div class="doctor-photo">👨‍⚕️</div>
             <div class="doctor-bio">
                 <h2>Dr. Ed O'Bryan, MD</h2>
-                <p class="title">Board-Certified Physician · Performance & ADHD Medicine</p>
-                <p>Dr. O'Bryan built Contour Performance because he was tired of watching high-performing adults get lost in a healthcare system designed for volume, not outcomes.</p>
-                <p>With training in both traditional and functional medicine, he brings a perspective most practices simply can't offer. He looks at the whole picture — your neurochemistry, gut health, hormones, sleep, inflammation — because your body is one system, and your treatment should reflect that.</p>
-                <p>He intentionally caps his practice at ~150 patients because the math is simple: fewer patients means more time, deeper understanding, and better results. If your current doctor sees 30 people a day, they don't know you. Dr. O'Bryan does.</p>
-                <div class="doctor-quote">"Performance medicine isn't about shortcuts. It's about understanding your physiology deeply enough to remove the things holding you back and amplify the things driving you forward."</div>
+                <p class="title">Board-Certified Physician · Performance Medicine · Charleston, SC</p>
+                <p>Dr. O'Bryan founded Contour Performance because he was tired of a system that rewards volume over value. He saw too many patients getting "fine" care from doctors who were too overwhelmed to go deeper.</p>
+                <p>With training in both traditional and functional medicine, he brings a perspective most physicians don't have — and a patient panel small enough to actually use it. He looks at the full picture: neurochemistry, gut health, hormones, sleep, stress — because health doesn't exist in silos, and your treatment shouldn't either.</p>
+                <p>He caps his practice at ~150 patients because that's the number where exceptional care is still possible. Where he knows your name, your family, your goals — not just your chart.</p>
+                <div class="doctor-quote">"I didn't go into medicine to see 30 patients a day and spend more time on paperwork than people. I went into medicine to actually help — and that requires time, attention, and giving a damn."</div>
             </div>
         </div>
     </div>
@@ -619,22 +618,23 @@
 <section id="pricing">
     <div class="section-inner">
         <div class="section-header">
-            <h2>Simple pricing. Real care.</h2>
+            <h2>Transparent pricing. Exceptional care.</h2>
         </div>
         <div class="pricing-card">
             <div class="pricing-label">Monthly Membership</div>
             <div class="pricing-amount">
-                <span class="tilde">~</span><span class="dollar">$</span><span class="price">150</span><span class="period">/month</span>
+                <span class="dollar">$</span><span class="price">TBD</span><span class="period">/month</span>
             </div>
-            <p class="pricing-note">Direct-pay. No insurance games. Cancel anytime.</p>
+            <p class="pricing-note">Direct-pay. No insurance games. No hidden fees.</p>
             <ul class="pricing-features">
                 <li>Dedicated physician access — Dr. Ed O'Bryan, every visit</li>
-                <li>Comprehensive initial evaluation + advanced labs</li>
-                <li>ADHD optimization (stimulants, peptides, functional protocols)</li>
-                <li>Performance medicine — hormones, energy, sleep, body comp</li>
-                <li>Regular check-ins + real-time adjustments</li>
-                <li>Direct messaging with your doctor</li>
+                <li>Comprehensive evaluation + advanced labs</li>
+                <li>Personalized performance & health optimization plan</li>
+                <li>ADHD management (stimulants, peptides, functional protocols)</li>
+                <li>Direct communication — text or call your doctor</li>
+                <li>Unhurried visits (30-60 min)</li>
                 <li>Functional medicine integration</li>
+                <li>Same-day or next-day scheduling</li>
             </ul>
             <a href="#get-started" class="btn-primary" style="width: 100%; justify-content: center; font-size: 1.05rem;">Get Started →</a>
         </div>
@@ -649,36 +649,40 @@
         </div>
         <div class="faq-list">
             <div class="faq-item">
-                <button class="faq-q">What exactly is "concierge medicine"?</button>
-                <div class="faq-a">Concierge medicine is a membership-based model where you pay a monthly fee for enhanced access and more comprehensive care from your physician. Because we're not billing insurance for 30 patients a day, we can actually spend time with you, answer your calls, and treat you like a person instead of a chart number.</div>
+                <button class="faq-q">What is concierge medicine?</button>
+                <div class="faq-a">Concierge medicine is a membership-based model where you pay a monthly or annual fee for enhanced access to your physician. Smaller patient panels mean longer visits, same-day availability, and a doctor who actually knows you. It's healthcare the way it should work.</div>
             </div>
             <div class="faq-item">
                 <button class="faq-q">Why MD-only? What's wrong with NPs and PAs?</button>
-                <div class="faq-a">Nothing — they're great for a lot of things. But performance medicine and ADHD management are nuanced. Stimulant dosing, peptide therapies, hormone optimization, drug interactions — this is specialist-level work. We believe you deserve a physician's training and judgment for decisions that affect your brain and body chemistry.</div>
+                <div class="faq-a">Nothing — they're great for a lot of things. But complex medication management, performance optimization, and ADHD care require a physician's depth of training. We believe you deserve that for decisions affecting your brain chemistry and long-term health.</div>
             </div>
             <div class="faq-item">
-                <button class="faq-q">What do you mean by "functional medicine"?</button>
-                <div class="faq-a">Functional medicine looks at root causes, not just symptoms. We evaluate gut health, nutrition, sleep quality, hormonal balance, inflammation — all the factors that can tank your performance or make medications less effective. We don't replace conventional medicine. We make it work better.</div>
+                <button class="faq-q">What do you mean by "performance medicine"?</button>
+                <div class="faq-a">Performance medicine goes beyond treating disease. We optimize the factors that determine how well you function — energy, cognition, sleep quality, hormonal balance, body composition, stress resilience. Whether you're an executive, entrepreneur, or athlete, we help you operate at your ceiling, not your floor.</div>
             </div>
             <div class="faq-item">
-                <button class="faq-q">Do you prescribe stimulants for ADHD?</button>
-                <div class="faq-a">Yes. Dr. O'Bryan is a licensed physician and follows all DEA and state regulations for prescribing controlled substances. But stimulants are just one tool. We also use non-stimulant medications, peptides, and functional protocols to optimize cognitive performance holistically.</div>
+                <button class="faq-q">Do you specialize in ADHD?</button>
+                <div class="faq-a">Yes. ADHD optimization is a core part of what we do. We go beyond standard stimulant management — incorporating peptides, functional medicine protocols, and targeted therapies to help your brain work at its best.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-q">What does "functional medicine" mean?</button>
+                <div class="faq-a">Functional medicine looks at root causes, not just symptoms. We evaluate gut health, nutrition, sleep, inflammation, and hormonal balance — the factors that conventional medicine often overlooks but that dramatically affect how you feel and function.</div>
             </div>
             <div class="faq-item">
                 <button class="faq-q">Why only ~150 patients?</button>
-                <div class="faq-a">Because the math doesn't lie. A typical primary care doc sees 2,000+ patients. At that volume, you get 7 minutes per visit and a doctor who can't remember your name. We cap at ~150 so Dr. O'Bryan can provide the depth of care this model promises. When we're full, we start a waitlist.</div>
+                <div class="faq-a">Because that's the number where genuine, relationship-based care is possible. Most primary care doctors carry 2,000+ patients. At 150, Dr. O'Bryan knows your history, your goals, and your family — not just your diagnosis codes.</div>
             </div>
             <div class="faq-item">
                 <button class="faq-q">Do you accept insurance?</button>
-                <div class="faq-a">Contour Performance is a direct-pay membership practice. We don't bill insurance. This lets us spend actual time with you instead of fighting prior authorizations. At ~$150/month, most patients find this costs less than their copays + deductibles at traditional practices — with dramatically better care.</div>
+                <div class="faq-a">Contour Performance is a direct-pay practice. We don't bill insurance. This eliminates the bureaucracy that forces most doctors into 10-minute visits and lets us spend real time on your care. Many patients find the membership costs less than their annual copays and deductibles.</div>
             </div>
             <div class="faq-item">
-                <button class="faq-q">Is this just for ADHD?</button>
-                <div class="faq-a">No. ADHD is a core specialty, but Contour Performance is a full concierge medical practice. We work with high-performers on cognitive optimization, hormone management, body composition, energy, sleep, and overall health strategy. If you want a doctor who treats you like a whole person, we're it.</div>
+                <button class="faq-q">Do I still need a primary care doctor?</button>
+                <div class="faq-a">Contour Performance can serve as your primary care — or as a specialist complement to your existing PCP. We'll discuss the best setup for your situation during your consultation.</div>
             </div>
             <div class="faq-item">
-                <button class="faq-q">I don't live in Charleston. Can I still join?</button>
-                <div class="faq-a">We're based in Charleston, SC and offer a hybrid model with virtual visits. Reach out and we'll discuss whether our practice can work for your location and needs.</div>
+                <button class="faq-q">How do I get started?</button>
+                <div class="faq-a">Book a consultation below. We'll have an honest conversation about your health goals and whether Contour Performance is the right fit. No pressure, no sales pitch — just a real conversation with a real doctor.</div>
             </div>
         </div>
     </div>
@@ -686,10 +690,10 @@
 
 <!-- FINAL CTA -->
 <section class="final-cta" id="get-started">
-    <h2>Ready to upgrade your healthcare?</h2>
-    <p>You optimize everything else in your life — your schedule, your training, your work output. Why is your healthcare still stuck in the assembly-line model?</p>
-    <p>Contour Performance exists for people who want more from their medicine. More time. More depth. More results. A physician who treats you like the complex, high-performing human you are.</p>
-    <p class="price-line">~$150/month. One physician. A plan built for your physiology.</p>
+    <h2>Ready for medicine that matches your ambition?</h2>
+    <p>You invest in your business, your fitness, your family. It's time to invest in a doctor who invests back in you.</p>
+    <p>Contour Performance is concierge medicine for people who demand more — more time, more access, more answers, and a physician who performs at your level.</p>
+    <p class="price-line">~150 patients. One physician. Medicine without compromise.</p>
     <a href="#" class="btn-white">Get Started →</a>
     <p class="sub-cta">Not ready to commit? <a href="#">Book a free consultation</a> to see if we're the right fit.</p>
 </section>
@@ -698,7 +702,7 @@
 <footer>
     <div class="footer-inner">
         <div class="footer-logo">Contour Performance</div>
-        <p class="footer-tagline">Medicine that performs as hard as you do.</p>
+        <p class="footer-tagline">Medicine designed around you.</p>
         <div class="footer-links">
             <a href="#">Home</a>
             <a href="#about">About</a>
@@ -706,8 +710,9 @@
             <a href="#faq">FAQ</a>
             <a href="#">Contact</a>
             <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
         </div>
-        <p class="footer-legal">Contour Performance is a concierge medical practice based in Charleston, SC. Currently accepting adults 18+. Contour Performance provides concierge-level care and does not replace emergency services. All prescribing follows applicable state and federal regulations.</p>
+        <p class="footer-legal">Contour Performance is a concierge medical practice located in Charleston, South Carolina. All care is provided by a licensed, board-certified physician. Contour Performance does not bill insurance. All prescribing follows applicable state and federal regulations.</p>
         <p style="margin-top: 1rem; font-size: 0.75rem;">© 2026 Contour Performance. All rights reserved.</p>
     </div>
 </footer>
