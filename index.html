@@ -258,14 +258,7 @@ section { padding: 7rem 2rem; }
 .tier:hover { border-color: var(--border-light); background: var(--bg-card-hover); }
 .tier.featured { border-color: var(--gold-dim); }
 .tier.featured::before {
-  content: 'MOST POPULAR';
-  position: absolute; top: -0.6rem; left: 2rem;
-  background: var(--gold);
-  color: var(--bg-primary);
-  font-size: 0.6rem;
-  letter-spacing: 0.15em;
-  padding: 0.2rem 0.8rem;
-  font-weight: 600;
+  display: none;
 }
 .tier-name {
   font-family: var(--serif);
@@ -485,6 +478,7 @@ footer .footer-logo {
     <li><a href="#philosophy">Philosophy</a></li>
     <li><a href="#membership">Membership</a></li>
     <li><a href="#physician">Physician</a></li>
+    <li><a href="#blog">Blog</a></li>
     <li><a href="#inquire" class="nav-cta">Inquire</a></li>
   </ul>
   <button class="nav-toggle" id="navToggle" aria-label="Menu">
@@ -613,6 +607,15 @@ footer .footer-logo {
         <p>Dr. O'Bryan's passion is marrying the best aspects of functional, traditional, and longevity medicine into a customized performance plan — one that's built around you, not a protocol. By drawing on root-cause diagnostics, evidence-based clinical care, and proactive longevity strategies, he creates a single, cohesive approach designed to help you perform at your highest level for as long as possible.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section class="doctor" id="blog" style="padding: 6rem 2rem; text-align: center;">
+  <div class="container reveal">
+    <span class="section-label">Insights</span>
+    <h2 class="section-title" style="margin-bottom: 1.5rem;">Blog</h2>
+    <p style="color: var(--text-secondary); font-size: 1.1rem; font-weight: 300; max-width: 500px; margin: 0 auto;">Coming Soon — Stay tuned for insights on performance medicine, longevity, and optimized living.</p>
   </div>
 </section>
 
