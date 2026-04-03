@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://contour-performance.com/sitemap.xml
